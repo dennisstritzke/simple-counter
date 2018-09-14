@@ -3,8 +3,7 @@ Host a simple counter that counts to a specified date.
 
 ## Quick Start
 ```
-docker build -t simple-counter:latest .
-docker run -d --name simple-counter -p 8080:8080 simple-counter:latest
+docker run -d --name simple-counter -p 8080:8080 dstritzke/simple-counter:latest
 ```
 
 Query the counter using the following URL scheme.
