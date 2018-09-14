@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #2d2d2d;
+      #background-image: url("logo.png");
+      background-position: 95% 5%;
+      background-repeat: no-repeat;
+      background-size: 25% auto;
+      font-family: sans-serif;
+      color: white;
+      font-size: 10vh;
+    }
+
+    span {
+      font-size: 30vh;
+    }
+  </style>
+</head>
+<body>
+<div id="counter" class="container-fluid h-100">
+  <div class="row justify-content-center h-100">
+    <div class="col-3 text-center my-auto">
+      <span class="hours"></span>
+      <div class="smalltext">Hours</div>
+    </div>
+    <div class="col-3 text-center my-auto">
+      <span class="minutes"></span>
+      <div class="smalltext">Minutes</div>
+    </div>
+    <div class="col-3 text-center my-auto">
+      <span class="seconds"></span>
+      <div class="smalltext">Seconds</div>
+    </div>
+  </div>
+</div>
+<script src="countTillDeadline.js"></script>
+</body>
+</html>
