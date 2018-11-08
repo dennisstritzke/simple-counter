@@ -2,7 +2,7 @@
   var timeInterval;
   var deadline = new Date(getParameterByName("year"),
       getParameterByName("month"),
-      getParameterByName("days"),
+      getParameterByName("day"),
       getParameterByName("hour"),
       getParameterByName("minute"),
       getParameterByName("second"));
@@ -21,7 +21,8 @@
       clearInterval(timeInterval);
       setDuration(0, 0, 0);
     } else {
-      setDuration(diff.getHours(), diff.getMinutes(), diff.getSeconds())
+      let days = Math.floor(diff.getTime() / 1000 / 3600 / 24);
+      setDuration(days * 24 + diff.getHours(), diff.getMinutes(), diff.getSeconds())
     }
   }
 
