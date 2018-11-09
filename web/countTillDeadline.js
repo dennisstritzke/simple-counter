@@ -1,21 +1,21 @@
 (function () {
   var timeInterval;
-  var deadline = new Date(getParameterByName("year"),
+  let deadline = new Date(getParameterByName("year"),
       getParameterByName("month") - 1,
       getParameterByName("day"),
       getParameterByName("hour"),
       getParameterByName("minute"),
       getParameterByName("second"));
 
-  var clock = document.getElementById("counter");
+  let clock = document.getElementById("counter");
 
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
+  let hoursSpan = clock.querySelector('.hours');
+  let minutesSpan = clock.querySelector('.minutes');
+  let secondsSpan = clock.querySelector('.seconds');
 
   function updateClock() {
-    var now = new Date();
-    var diff = new Date(deadline.getTime() - now.getTime());
+    let now = new Date();
+    let diff = new Date(deadline.getTime() - now.getTime());
 
     if (diff.getTime() <= 0) {
       clearInterval(timeInterval);
@@ -42,8 +42,8 @@
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
+    let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+    let results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
